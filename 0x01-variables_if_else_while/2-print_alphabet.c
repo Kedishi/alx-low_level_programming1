@@ -1,14 +1,19 @@
 #include <stdio.h>
-#include <ctype.h>
 
-int main(void){
+/**
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
 
-	char i;
-
-
-	putchar ("Lower case characters: \n");
-	for(i='a'; i<='z'; i++)
-
-		return 0;
+	for (i = 0; i < 26; i++)
+	{
+		putchar(alp[i]);
+	}
+	putchar('\n');
+	return (0);
 }
 
