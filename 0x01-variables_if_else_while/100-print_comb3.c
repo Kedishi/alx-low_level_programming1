@@ -31,8 +31,7 @@ int main(void)
 																																																																							break;
 																																																																												}
 																																																															putchar(',');
-																																																																				putchar(' ');
-																																																																								}
+																																																																				for(' ');																																																																								}
 																																				g++;
 																																							}
 																										i++;
