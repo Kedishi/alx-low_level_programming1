@@ -2,36 +2,22 @@
 
 
 /**
- * main - check the code
- * Return: Always 0
+ * _isalpha -  checks for lowercase character and return 1 or 0
+ * @c:int
+ * Return: @c value , 1 if c is a letter, lowercase or uppercase
+ * otherwise 0
  */
 
-int main(void)
+int _isalpha(int c)
 
 {
 
-	    int r;
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 
+					return (1);
 
+			else
 
-	        r = _isalpha('H');
+						return (0);
 
-		    _putchar(r + '0');
-
-		        r = _isalpha('o');
-
-			    _putchar(r + '0');
-
-			        r = _isalpha(108);
-
-				    _putchar(r + '0');
-
-				        r = _isalpha(';');
-
-					    _putchar(r + '0');
-
-					        _putchar('\n');
-
-						    return (0);
-
-}
+				}
