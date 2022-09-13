@@ -1,20 +1,34 @@
-#include <stdio.h>
+#include "main.h"
+
+
 
 /**
- * main - Prints the alphabet.
  *
- * Return: Always 0 (Success)
+ * print_alphabe - check the code
+ *
+ *
+ *
+ * Return: Always on success.
+ *
  */
-int putchar(void)
-{
-	char alp[26] = 
-		"abcdefghijklmnopqrstuvwxyz";
-	int i;
-	for (i = 0; i < 26; i++)
-	{
-		putchar(alp[i]);
-	}
-	putchar("\n", char);
-	return (0);
-}
 
+void print_alphabet(void)
+
+{
+
+		char c = 'a';
+
+
+
+			while (c <= 'z')
+
+					{
+
+								_putchar(c);
+
+										
+											}
+
+				_putchar ('\n');
+
+}
