@@ -1,12 +1,3 @@
-#include <unistd.h>
+int _putchar(char c);
 
-
-int main(void)
-{
-	char = 'K';
-	putchar("%c\n", ch );
-
-
-		return (0);
-
-}
+void print_alphabet(void);
