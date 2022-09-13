@@ -1,7 +1,5 @@
 #include "main.h"
 
-
-
 /**
  *
  * print_alphabe - check the code
@@ -21,14 +19,11 @@ void print_alphabet(void)
 
 
 			while (c <= 'z')
-
-					{
-
-								_putchar(c);
-
-										
-											}
+{										_putchar('c');
+}
 
 				_putchar ('\n');
+
+			return(0);
 
 }
