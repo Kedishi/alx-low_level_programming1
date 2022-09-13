@@ -1,9 +1,11 @@
 #include <unistd.h>
 
 
-int _putchar(int char)
-
+int main()
 {
+	_putchar = 'K';
+	_putchar("%c\n")
+
 
 		return 0;
 
