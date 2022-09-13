@@ -1,11 +1,14 @@
 #include "main.h"
 
+
 /**
- * print_alphabe - check the code
- * Return: Always on success
+ *print_alphabet - prints the english alphabet from a-z
+ *
+ * Return: 0
  */
 
 void print_alphabet(void)
+
 {
 
 		char c = 'a';
@@ -23,6 +26,5 @@ void print_alphabet(void)
 											}
 
 				_putchar ('\n');
-				return (0);
 
 }
