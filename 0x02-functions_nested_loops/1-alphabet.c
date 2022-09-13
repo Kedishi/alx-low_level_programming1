@@ -4,13 +4,13 @@
 
 /**
  *
- * print_alphabet - prints the english alphabet from a-z.
+ *  * print_alphabe - check the code
  *
- * 
+ *   *
  *
- * Return: Nothing.
+ *    * Return: Always on success.
  *
- */
+ *     */
 
 void print_alphabet(void)
 
