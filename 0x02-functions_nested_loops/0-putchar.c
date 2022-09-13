@@ -3,8 +3,8 @@
 
 int main(void)
 {
-	putchar = 'K' 
-	putchar("%c\n", _putchar);
+	char ch = 'K'
+	putchar("%c\n", ch );
 
 
 		return (0);
