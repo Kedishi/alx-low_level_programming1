@@ -1,12 +1,12 @@
 #include <unistd.h>
 
 
-int main()
+int main(void)
 {
-	_putchar = 'K';
-	_putchar("%c\n")
+	putchar = 'K' 
+	putchar("%c\n", _putchar);
 
 
-		return 0;
+		return (0);
 
 }
