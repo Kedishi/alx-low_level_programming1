@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	char ch = 'K'
+	char = 'K';
 	putchar("%c\n", ch );
 
 
