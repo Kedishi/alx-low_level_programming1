@@ -1,22 +1,47 @@
 #include "main.h"
 
-
 /**
- *
- * main - check code that prints n times tables starting with 0
- * Return: always 0
- *
+ * print_times_table - print times tables from zero to n
+ * @n: integer
  */
-int main(void)
+
+void print_times_table(int n)
 {
-	print_times_table(3);
-	    _putchar('\n');
-        print_times_table(5);
-	    _putchar('\n');
-        print_times_table(98);
-	    _putchar('\n');
-       print_times_table(12);
+	int a = 0;
 
-	    return (0);
+	if (n >= 0 && n <= 15)
+	{
+		while (a <= n)
+		{
+			int b = 1;
 
-}
+			_putchar('0');
+			while (b <= n)
+			{
+				int p = a * b;
+
+				_putchar(',');
+				_putchar(' ');
+				if (p < 10)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(p + '0');
+				}
+				else if (p > 99)
+				{
+					_putchar((p / 100) + '0');
+					_putchar(((p / 10) % 10) + '0');
+					_putchar((p % 10) + '0');
+				}
+				else
+				{
+					_putchar(' ');
+					_putchar((p / 10) + '0');
+					_putchar((p % 10) + '0');
+				}
+				b++;
+			}
+			_putchar('\n');
+			a++;
+		}
