@@ -5,72 +5,47 @@
 
 /**
  *
- * jack_bauer - function that prints every minute of the day of Jack Bauer
+ * jack_bauer - unction that prints every minute of the day of Jack Bauer
  * starting from 00:00 to 23:59
- * @n: int
- * Return: always 0
+ * Return: Always 0
  */
 
 void jack_bauer(void)
 
 {
 
-		int i = 0;
+		int h = 0;
 
-			for (;i <= 23; i++)
+
+
+			for (; h <= 23; h++)
 
 					{
 
-								int j = 0;
+								int m = 0;
 
-										while (j <= 59)
+
+
+										while (m <= 59)
 
 													{
 
-																			/* int lastj = print_last_digit(j); */
+																	_putchar (h / 10 + '0');
 
-																			/* int lasti = print_last_digit(i); */
+																				_putchar (h %  10 + '0');
 
-																			int lastj = j % 10;
+																							_putchar (':');
 
-																								int lasti = i % i;
+																										_putchar (m / 10 + '0');
 
-																													/* Total number of digits - 1 */
+																													_putchar (m % 10 + '0');
 
-																													int digitj = (int)log10(j);
+																																_putchar ('\n');
 
-																																		int digiti = (int)log10(i);
+																																			m++;
 
+																																					}
 
-
-																																							/* Find first digit */
-
-																																		       					int firstj = (int)(j / pow(10,digitj));
-
-																																												int firsti = (int)(i / pow(10,digiti));
-
-																																																	/* printf ("j=%d||i= %d\n",digitj, digiti); */
-
-																																																	/* printf ("j=%d&&i= %d\n",firstj, firsti); */
-
-																																																	_putchar (firsti + '0');
-
-																																																						_putchar (lasti + '0');
-
-																																																											_putchar (':');
-
-																																																																_putchar (firstj + '0');
-
-																																																																					_putchar (lastj + '0');
-
-																																																																										_putchar ('\n');
-
-																																																																															j++;
-
-																																																																																			}
-
-														i++;
-
-																	}
+											}
 
 }
