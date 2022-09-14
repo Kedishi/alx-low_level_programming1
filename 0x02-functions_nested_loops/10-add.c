@@ -2,17 +2,27 @@
 
 
 /**
-* check the code for addition of two int
-* result: always 0
-*/
+ *
+ * main - check the code
+ *
+ * 
+ *
+ * Return: Always 0
+ *
+ */
 
 int main(void)
+
 {
-	int i = 10;
-	int k = 11;
 
-	i, k = add(10, 11);
-	printf("%i\n", i, k);
+	    int n;
 
-	return (0);
+
+
+	        n = add(10, 11);
+
+		    printf("%d\n", n);
+
+		        return (0);
+
 }
