@@ -2,51 +2,50 @@
 
 /**
  * main - entry point
+ *
  * Return: always 0
  */
 
 int main(void)
+
 {
-	int p = 100;
 
-	int i;
+	int i = 1;
 
-	i = 1;
 
-	while (i <= p)
+
+	for (; i <= 100; i++)
+
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+
+		if (i == 100)
+
 		{
-			printf("FizzBuzz ");
+
+			printf("Buzz\n");
+
+			break;
+
 		}
+
+		if (i % 3 == 0 && i % 5 == 0)
+
+			printf("FizzBuzz ");
 
 		else if (i % 3 == 0)
-		{
+
 			printf("Fizz ");
-		}
 
 		else if (i % 5 == 0)
-		{
-			if (i < p)
 
-				printf("Buzz ");
-
-		}
+			printf("Buzz ");
 
 		else
 
-			printf("Buzz");
+			printf("%d ", i);
+
 	}
 
-	else
-	{
-		printf("%i ", i);
-	}
-
-	i++
-}
-printf("\n");
-
-return (0);
+	return (0);
 
 }
