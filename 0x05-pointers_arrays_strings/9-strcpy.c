@@ -1,12 +1,17 @@
 #include "main.h"
+#include <stddef.h>
+#include <string.h>
 
+/* #include <stdio.h> */
 
 /**
  *_strcpy - function that copies the string pointed to by src,
- *@dest:pointer to a char that would be changed
- *@src:pointer to a char that would be changed
+ *including the terminating null byte (\0), to the buffer pointed to by dest.
+ *@dest:pointer to a char that'd be changed
+ *@src:pointer to a char that would ebe changed
  *Return: string
  */
+
 
 char *_strcpy(char *dest, char *src)
 
