@@ -12,16 +12,17 @@ int main(void)
 
 {
 
-	int num;
-
-
+	int i;
+	char c;
 
 	srand(time(0));
-
-	num = rand();
-
-	printf("%i\n", num);
+	while (i <= 2645)
+	{
+		c = rand() % 128;
+		i += c;
+		putchar(c);
+	}
+	putchar(2772 - i);
 
 	return (0);
-
 }
