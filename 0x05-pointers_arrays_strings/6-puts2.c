@@ -2,45 +2,28 @@
 
 
 /**
- *puts_half - prints every other character of a string
- *@str: a pointer to an int that will be changed
- *Return: void which means our answer is correct
+ * puts2 - A function that prints every other character of a string,
+ * Followed by a new line.
+ * @str: An input string
+ * Return: void
  */
 
-void puts_half(char *str)
+void puts2(char *str)
 
 {
 
-int i, last;
-
-i = 0;
-
-while (str[i] != '\0')
-
-{
-
-i++;
-
-}
+	int index = 0, len = 0;
 
 
 
-last = (i + 1) / 2;
+	while (str[index++])
 
+		len++;
 
+	for (index = 0; index < len; index += 2)
 
-for (i = last; str[i]; i++)
+		_putchar(str[index]);
 
-{
-
-_putchar (str[i]);
-
-}
-
-
-
-_putchar ('\n');
-
-
+	_putchar('\n');
 
 }
