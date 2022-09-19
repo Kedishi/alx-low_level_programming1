@@ -9,42 +9,37 @@
 void rev_string(char *s)
 {
 
-char *start_c, *end_c, c;
+	long int i = sizeof(s);
+	char *p = s;
 
-int i, count;
+	printf("lent of p = %ld\n", sizeof(p));
+	while (i >= 0)
 
-int length = 0;
-for (i = 0; s[i]; i++)
+	{
 
-{
+		/* printf("i=%d\n",i); */
 
-length++;
-count = length;
+		/* printf("siz-i=%ld\n",sizeof(s) - i); */
 
-start_c = s;
+		/* printf ("%c", s[i--]); */
 
-end_c = s;
+		*(p + (sizeof(s) - i)) = s[i];
 
-for (i = 0; i < count - 1; i++)
+		/* printf("sizeof = %ld \n", sizeof(s)); */
 
-{
+		/* printf("%c\n", s[i]); */
 
-end_c++;
+		/* p++; */
 
-}
+		printf("\np=%c\n", *p);
 
-for (i = 0; i < count / 2; i++)
+	       printf("size of p = %ld\n", sizeof(p));
 
-{
+		i--;
+	}
 
-c = *end_c;
+	printf("\n");
 
-*end_c = *start_c;
-
-*start_c = c;
-
-start_c++;
-
-end_c--;
-}
+	/* sleep(2); */
+	/* *s = *p; */
 }
