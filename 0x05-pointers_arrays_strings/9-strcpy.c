@@ -1,10 +1,11 @@
 #include "main.h"
 
+
 /**
- *_strcpy - copies the string pointed to by src
- *@dest: a pointer to a char that will be changed
- *@src: a pointer to a char that will be changed
- *Return: dest
+ *_strcpy - function that copies the string pointed to by src,
+ *@dest:pointer to a char that would be changed
+ *@src:pointer to a char that would be changed
+ *Return: string
  */
 
 char *_strcpy(char *dest, char *src)
@@ -38,7 +39,3 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 
 }
-
-Footer
-
-© 2022 GitHub, Inc.
