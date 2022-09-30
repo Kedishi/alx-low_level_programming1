@@ -1,26 +1,50 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
- * main - Print the name of the program
- * @argc: Count arguments
- * @argv: Arguments
- * Return:0
+ * main - function
+ *@argc: length of argv
+ *@argv: number of argument
+ *Return: 0
  */
 
 int main(int argc, char *argv[])
 {
 
-int count = 0;
+int position, total, change, aux;
+int coins[] = {25, 10, 5, 2, 1};
 
-if (argc > 0)
-{
+position = total = change = aux = 0;
 
-while (count < argc)
+if (argc != 2)
 {
-printf("%s\n", argv[count]);
-count++;
+printf("Error\n");
+return (1);
 }
+
+total = atoi(argv[1]);
+
+if (total <= 0)
+{
+printf("0\n");
+return (0);
 }
+
+
+while (coins[position] != '\0')
+
+{
+if (total >= coins[position])
+{
+aux = (total / coins[position]);
+change += aux;
+total -= coins[position] * aux;
+}
+
+position++;
+
+}
+
+printf("%d\n", change);
 return (0);
 }
