@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  *create_array - array for prints a string
@@ -9,40 +10,27 @@
  */
 
 char *create_array(unsigned int size, char c)
+
 {
 
-char *buffer;
-unsigned int position;
+	char *array;
 
-if (size == 0)
-{
+	unsigned int index;
 
-return (NULL);
-}
+	if (size == 0)
 
-buffer = (char *) malloc(size * sizeof(c));
+		return (NULL);
 
-if (buffer == 0)
-{
+	array = malloc(sizeof(char) * size);
 
-return (NULL);
+	if (array == NULL)
 
-}
-else
-{
-position = 0;
+		return (NULL);
 
-while (position < size)
-{
+	for (index = 0; index < size; index++)
 
-*(buffer + position) = c;
+		array[index] = c;
 
-position++;
-
-}
-
-return (buffer);
-
-}
+	return (array);
 
 }
