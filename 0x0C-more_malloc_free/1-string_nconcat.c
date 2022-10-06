@@ -10,18 +10,6 @@
  * Return : char pointer
  */
 
-#include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-/**
- * string_nconcat - concatenates two strings
- * @s1 : first string
- * @s2 : second string
- * @n : number of byte of s2 concat to s1
- * Return : char pointer
- */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ch;
