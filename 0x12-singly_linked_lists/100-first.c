@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - check code for main
+ * bmain - check code for main
  * Return:0
  */
 
