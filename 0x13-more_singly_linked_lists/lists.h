@@ -4,7 +4,6 @@
 
 #include <stdlib.h>
 
-typedef struct listsint_s
 typedef struct listint_s
 {
 	int n;
