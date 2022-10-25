@@ -1,8 +1,9 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * free_listp - frees a linked list
- * @head: head of a lis
+ * @head: head of a list
  * Return:
  */
 
@@ -24,9 +25,9 @@ void free_listp(listp_t **head)
 }
 
 /**
- * print_listint_safe - prints a linked list
+ * print_listint_safe - prints a linked list.
  * @head: head of a list
- * Return: number of nodes in the list
+ * Return: number of nodes
  */
 
 size_t print_listint_safe(const listint_t *head)
