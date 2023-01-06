@@ -1,7 +1,4 @@
 #include "hash_tables.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 /**
  * hash_table_set - Add or update an element in a hash table.
@@ -12,59 +9,45 @@
  * Return: Upon failure - 0.
  *         Otherwise - 1.
  */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+{
+	hash_node_t *new;
+	char *value_copy;
+	unsigned long int index, i;
 
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+		return (0);
 
-typedef struct hash_table_entry {
-  char *key;
-  char *value;
-  struct hash_table_entry *next;
-} hash_table_entry_t;
+	value_copy = strdup(value);
+	if (value_copy == NULL)
+		return (0);
 
-typedef struct {
-  unsigned long int size;
-  hash_table_entry_t **entries;
-} hash_table_t;
+	index = key_index((const unsigned char *)key, ht->size);
+	for (i = index; ht->array[i]; i++)
+	{
+		if (strcmp(ht->array[i]->key, key) == 0)
+		{
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_copy;
+			return (1);
+		}
+	}
 
-unsigned long int hash(const char *key, unsigned long int size) {
-  unsigned long int hash = 5381;
-  int c;
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
+	{
+		free(value_copy);
+		return (0);
+	}
+	new->key = strdup(key);
+	if (new->key == NULL)
+	{
+		free(new);
+		return (0);
+	}
+	new->value = value_copy;
+	new->next = ht->array[index];
+	ht->array[index] = new;
 
-  while ((c = *key++)) {
-    hash = ((hash << 5) + hash) + c;
-  }
-
-  return hash % size;
+	return (1);
 }
-
-int hash_table_set(hash_table_t *ht, const char *key, const char *value) {
-  if (ht == NULL || key == NULL || strlen(key) == 0 || value == NULL) {
-    return 0;
-  }
-
-  unsigned long int index = hash(key, ht->size);
-  hash_table_entry_t *entry = ht->entries[index];
-
-  while (entry != NULL) {
-    if (strcmp(entry->key, key) == 0) {
-      // Key already exists, update value
-      free(entry->value);
-      entry->value = strdup(value);
-      return 1;
-    }
-    entry = entry->next;
-  }
-
-  // Key does not exist, create new entry
-  hash_table_entry_t *new_entry = malloc(sizeof(hash_table_entry_t));
-  if (new_entry == NULL) {
-    return 0;
-  }
-
-  new_entry->key = strdup(key);
-  new_entry->value = strdup(value);
-  new_entry->next = ht->entries[index];
-  ht->entries[index] = new_entry;
-
-  return 1;
-}
-
